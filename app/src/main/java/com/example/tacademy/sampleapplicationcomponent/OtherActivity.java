@@ -29,9 +29,11 @@ public class OtherActivity extends AppCompatActivity {
         inputResultView = (EditText) findViewById(R.id.edit_input_result);
 
         Intent intent = getIntent();
+
        /* String text = intent.getStringExtra(EXTRA_KEYWORD);
         int age = intent.getIntExtra(EXTRA_AGE, 0); */
-        MyData data = (MyData)intent.getParcelableExtra(EXTRA_MY_DATA);
+
+        MyData data = (MyData) intent.getParcelableExtra(EXTRA_MY_DATA);
         String text = data.keyword;
         int age = data.age;
 

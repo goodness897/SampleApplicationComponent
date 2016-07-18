@@ -21,9 +21,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        inputView = (EditText)findViewById(R.id.edit_input);
-        resultView = (TextView)findViewById(R.id.text_result);
-        Button btn = (Button)findViewById(R.id.btn_other);
+        inputView = (EditText) findViewById(R.id.edit_input);
+        resultView = (TextView) findViewById(R.id.text_result);
+        Button btn = (Button) findViewById(R.id.btn_other);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
                 data.age = 42;
 
                 intent.putExtra(OtherActivity.EXTRA_MY_DATA, data);
-
 
                 /*intent.putExtra(OtherActivity.EXTRA_KEYWORD, input);
                 intent.putExtra(OtherActivity.EXTRA_AGE, 42);*/
@@ -48,10 +47,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == RC_OTHER) {
-            if(resultCode == Activity.RESULT_OK) {
+            if (resultCode == Activity.RESULT_OK) {
                 String text = data.getStringExtra(OtherActivity.RESULT_MESSAGE);
                 resultView.setText(text);
-            } else{
+            } else {
                 Toast.makeText(this, "result canceled", Toast.LENGTH_LONG).show();
             }
         }

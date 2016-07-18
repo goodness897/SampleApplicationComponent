@@ -13,6 +13,7 @@ public class MyData implements Parcelable {
     public MyData() {
 
     }
+
     public MyData(Parcel parcel) {
         keyword = parcel.readString();
         age = parcel.readInt();
