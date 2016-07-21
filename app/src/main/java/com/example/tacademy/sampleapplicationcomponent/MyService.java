@@ -73,7 +73,6 @@ public class MyService extends Service {
         super.onDestroy();
         Toast.makeText(this, "onDestroy() 호출", Toast.LENGTH_LONG).show();
         isRunning = false;
-
         unregisterReceiver(mReceiver);
     }
 }
